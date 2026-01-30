@@ -38,7 +38,7 @@ export default function Hero() {
                 <span className="h-[1px] w-12 bg-primary/50"></span>
               </div>
               <h1 className="text-white text-5xl md:text-8xl font-bold leading-none tracking-[-0.04em] uppercase drop-shadow-[0_0_15px_rgba(37,140,244,0.3)]">
-                Alexander
+                Dilshad
                 <br />
                 <span
                   className="text-transparent"
@@ -46,7 +46,7 @@ export default function Hero() {
                     WebkitTextStroke: "1px rgba(255,255,255,0.8)",
                   }}
                 >
-                  Drake
+                  Basith
                 </span>
               </h1>
               <p className="text-[#90adcb] text-xs md:text-base font-medium tracking-[0.3em] uppercase max-w-xl mx-auto mt-4">
