@@ -27,7 +27,7 @@ export default function Experience() {
             <div className="relative flex md:flex-row flex-col items-center w-full">
               <div className="md:w-1/2 w-full md:pr-12 md:text-right hidden md:block">
                 <span className="text-3xl font-bold text-primary/40 font-mono">
-                  2023
+                  2024
                 </span>
                 <div className="text-[10px] tracking-widest text-white/40 uppercase">
                   Present
@@ -46,17 +46,17 @@ export default function Experience() {
                     <div className="corner-bracket absolute bottom-0 right-0 border-b border-r"></div>
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-[10px] font-bold text-accent-cyan tracking-widest uppercase">
-                        ID: SRT_LEAD_01
+                        ID: EXTHGEN_01
                       </span>
                       <span className="material-symbols-outlined text-sm text-primary/60">
-                        terminal
+                        code
                       </span>
                     </div>
                     <h3 className="text-lg font-bold text-white mb-1 uppercase tracking-tight">
-                      Lead Interaction Architect
+                      Front-End Developer
                     </h3>
                     <p className="text-xs text-primary/80 font-mono mb-4">
-                      @ NEURAL-SYNAPSE LABS
+                      @ EXTHGEN TECHNOLOGIES LLP
                     </p>
                     <ul className="space-y-2">
                       <li className="flex items-start gap-2">
@@ -64,8 +64,7 @@ export default function Experience() {
                           &gt;&gt;
                         </span>
                         <p className="text-xs text-white/70 leading-relaxed font-mono">
-                          Developed immersive spatial UI for distributed cloud
-                          systems using WebGL and GLSL shaders.
+                          Built dynamic web apps using React.js and Next.js. Developed the official company website focusing on SEO and performance.
                         </p>
                       </li>
                       <li className="flex items-start gap-2">
@@ -73,20 +72,19 @@ export default function Experience() {
                           &gt;&gt;
                         </span>
                         <p className="text-xs text-white/70 leading-relaxed font-mono">
-                          Optimized real-time data visualization pipelines,
-                          reducing latency by 45%.
+                          Designed reusable UI components with Tailwind CSS & Shadcn/UI, improving development speed and consistency.
                         </p>
                       </li>
                     </ul>
                     <div className="mt-4 flex gap-2">
                       <span className="text-[8px] px-2 py-0.5 border border-primary/30 rounded text-primary/60">
+                        NEXT.JS
+                      </span>
+                      <span className="text-[8px] px-2 py-0.5 border border-primary/30 rounded text-primary/60">
                         REACT
                       </span>
                       <span className="text-[8px] px-2 py-0.5 border border-primary/30 rounded text-primary/60">
-                        THREE.JS
-                      </span>
-                      <span className="text-[8px] px-2 py-0.5 border border-primary/30 rounded text-primary/60">
-                        GLSL
+                        SHADCN
                       </span>
                     </div>
                   </div>
@@ -104,17 +102,17 @@ export default function Experience() {
                     <div className="corner-bracket absolute bottom-0 right-0 border-b border-r"></div>
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-[10px] font-bold text-accent-cyan tracking-widest uppercase">
-                        ID: DEV_SNR_04
+                        ID: BRIDGEON_02
                       </span>
                       <span className="material-symbols-outlined text-sm text-primary/60">
-                        database
+                        terminal
                       </span>
                     </div>
                     <h3 className="text-lg font-bold text-white mb-1 uppercase tracking-tight">
-                      Senior Creative Dev
+                      MERN Stack Intern
                     </h3>
                     <p className="text-xs text-primary/80 font-mono mb-4">
-                      @ QUANTUM_VOX AGENCY
+                      @ BRIDGEON SOLUTIONS
                     </p>
                     <ul className="space-y-2">
                       <li className="flex items-start gap-2">
@@ -122,8 +120,7 @@ export default function Experience() {
                           &gt;&gt;
                         </span>
                         <p className="text-xs text-white/70 leading-relaxed font-mono">
-                          Architected modular component libraries for Fortune 500
-                          digital transformation projects.
+                          Specialized in Front-End Development with React.js. Contributed to a 20% increase in team proficiency.
                         </p>
                       </li>
                       <li className="flex items-start gap-2">
@@ -131,20 +128,19 @@ export default function Experience() {
                           &gt;&gt;
                         </span>
                         <p className="text-xs text-white/70 leading-relaxed font-mono">
-                          Pioneered low-light UI patterns now adopted across the
-                          ecosystem.
+                          Collaborated with cross-functional teams to deliver scalable web solutions.
                         </p>
                       </li>
                     </ul>
                     <div className="mt-4 flex gap-2">
                       <span className="text-[8px] px-2 py-0.5 border border-primary/30 rounded text-primary/60">
-                        VUE
+                        REACT
                       </span>
                       <span className="text-[8px] px-2 py-0.5 border border-primary/30 rounded text-primary/60">
-                        GSAP
+                        NODE.JS
                       </span>
                       <span className="text-[8px] px-2 py-0.5 border border-primary/30 rounded text-primary/60">
-                        D3.JS
+                        MONGODB
                       </span>
                     </div>
                   </div>
@@ -157,10 +153,10 @@ export default function Experience() {
 
               <div className="md:w-1/2 w-full md:pl-12 md:text-left hidden md:block">
                 <span className="text-3xl font-bold text-primary/40 font-mono">
-                  2021
+                  2023
                 </span>
                 <div className="text-[10px] tracking-widest text-white/40 uppercase">
-                  Phase 02
+                  2024
                 </div>
               </div>
             </div>
@@ -169,10 +165,10 @@ export default function Experience() {
             <div className="relative flex md:flex-row flex-col items-center w-full">
               <div className="md:w-1/2 w-full md:pr-12 md:text-right hidden md:block">
                 <span className="text-3xl font-bold text-primary/40 font-mono">
-                  2019
+                  2020
                 </span>
                 <div className="text-[10px] tracking-widest text-white/40 uppercase">
-                  Initial Boot
+                  2023
                 </div>
               </div>
 
@@ -182,23 +178,23 @@ export default function Experience() {
 
               <div className="md:w-1/2 w-full md:pl-12 flex justify-center md:justify-start">
                 <div className="w-full max-w-sm">
-                  <div className="data-log-panel p-6 rounded-lg relative overflow-hidden opacity-60 hover:opacity-100 transition-opacity">
+                  <div className="data-log-panel p-6 rounded-lg relative overflow-hidden opacity-80 hover:opacity-100 transition-opacity">
                     <div className="scanline absolute top-0 left-0"></div>
                     <div className="corner-bracket absolute top-0 left-0 border-t border-l"></div>
                     <div className="corner-bracket absolute bottom-0 right-0 border-b border-r"></div>
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-[10px] font-bold text-accent-cyan tracking-widest uppercase">
-                        ID: JNR_FND_00
+                        ID: EDU_BSC_03
                       </span>
                       <span className="material-symbols-outlined text-sm text-primary/60">
-                        deployed_code
+                        school
                       </span>
                     </div>
                     <h3 className="text-lg font-bold text-white mb-1 uppercase tracking-tight">
-                      Frontend Specialist
+                      BSc Computer Science
                     </h3>
                     <p className="text-xs text-primary/80 font-mono mb-4">
-                      @ NEON-GRID STUDIO
+                      @ EMEA COLLEGE OF ARTS AND SCIENCE
                     </p>
                     <ul className="space-y-2">
                       <li className="flex items-start gap-2">
@@ -206,20 +202,16 @@ export default function Experience() {
                           &gt;&gt;
                         </span>
                         <p className="text-xs text-white/70 leading-relaxed font-mono">
-                          Implemented responsive design frameworks for early-stage
-                          tech startups.
+                          Completed graduation with a strong foundation in computer science and software development.
                         </p>
                       </li>
                     </ul>
                     <div className="mt-4 flex gap-2">
                       <span className="text-[8px] px-2 py-0.5 border border-primary/30 rounded text-primary/60">
-                        HTML5
+                        CS
                       </span>
                       <span className="text-[8px] px-2 py-0.5 border border-primary/30 rounded text-primary/60">
-                        SASS
-                      </span>
-                      <span className="text-[8px] px-2 py-0.5 border border-primary/30 rounded text-primary/60">
-                        WEB-CORE
+                        ALGORITHMS
                       </span>
                     </div>
                   </div>

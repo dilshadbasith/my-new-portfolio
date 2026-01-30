@@ -12,14 +12,14 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center p-6 pointer-events-none">
       <nav className="glass-dock px-6 py-3 rounded-full flex items-center justify-between w-full max-w-2xl pointer-events-auto relative">
-        <div className="flex items-center gap-3">
+        <Link href="#home" className="flex items-center gap-3 cursor-pointer">
           <div className="size-6 text-primary">
             <FaCode className="text-2xl"/>
           </div>
           <span className="text-white font-bold tracking-widest text-sm">
             DEV
           </span>
-        </div>
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">

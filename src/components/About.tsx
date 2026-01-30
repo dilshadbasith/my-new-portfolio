@@ -50,7 +50,7 @@ export default function About() {
                 <img
                   alt="Identity Avatar"
                   className="w-full h-full object-cover grayscale opacity-80 mix-blend-screen"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCocW9JfeusNUzLM7nnIlxJbzcsOvbT3R11iq66GUBXvBTVsQJmjmu_ke3D_T08fThXxTkJh1Vn0JOcsDNW9Zg2o3hMsP7qQgvFRblRi95jGFCL9tDwP4_ygS0rVNrwcGCvXRqVMn-OB5ZmyibPgc0leBHepOUlKcKoOCH2bi7Mf84yEcCg023eZ90pcijIMyc_keopeWLBTNHQDgwvqCEBaR4dmuARipO86DwulvimdqA90q1t9qBqvMw1Bx8KR6dhTk6ZaiHeFhSJ"
+                  src="/futuristic-profile.png"
                 />
                 <div className="scanline"></div>
                 <div className="absolute inset-0 bg-primary/10 pointer-events-none"></div>
@@ -84,54 +84,55 @@ export default function About() {
                     </span>
                   </div>
                   <h1 className="text-4xl md:text-6xl font-bold tracking-tight uppercase">
-                    Alex{" "}
+                    Dilshad{" "}
                     <span
                       className="text-transparent font-light"
                       style={{
                         WebkitTextStroke: "1px rgba(255,255,255,0.7)",
                       }}
                     >
-                      Drake
+                      Basith
                     </span>
                   </h1>
                   <p className="font-mono text-primary/80 text-sm">
-                    System Architect & Interactive Designer
+                    Front-End Developer
                   </p>
                 </div>
                 <div className="inner-glass p-6 space-y-6">
                   <div className="font-mono text-sm leading-relaxed text-white/80">
                     <span className="text-primary mr-2">&gt;</span>{" "}
-                    Establishing neural link... Done.
+                    Initializing profile... Done.
                     <br />
-                    <span className="text-primary mr-2">&gt;</span> I bridge
-                    the gap between human perception and digital logic. With a
-                    foundation in low-level graphics programming and high-end
-                    visual design, I create immersive environments that exist
-                    at the edge of the possible.
+                    <span className="text-primary mr-2">&gt;</span> I am a
+                    passionate Front-End Developer specializing in building
+                    responsive, SEO-friendly web applications. With a strong
+                    foundation in React.js and Next.js, I transform complex
+                    requirements into seamless digital experiences.
                   </div>
                   <div className="font-mono text-sm leading-relaxed text-white/80">
                     <span className="text-primary mr-2">&gt;</span>{" "}
-                    Specialized in{" "}
+                    Educational Background:{" "}
                     <span className="text-white font-bold">
-                      WebGL, GLSL shaders, and React infrastructure
-                    </span>
-                    . I don't just build websites; I construct digital
-                    artifacts meant to be explored.
+                      BSc Computer Science
+                    </span>{" "}
+                    from EMEA College of Arts and Science (2020 - 2023).
+                    Dedicated to crafting scalable UI components and optimizing
+                    web performance.
                   </div>
                   <div className="flex flex-wrap gap-3 pt-4">
                     <div className="bg-primary/5 border border-primary/20 px-3 py-1 rounded">
                       <span className="text-[10px] font-mono text-primary">
-                        CORE: TYPESCRIPT
+                        CORE: JAVASCRIPT
                       </span>
                     </div>
                     <div className="bg-primary/5 border border-primary/20 px-3 py-1 rounded">
                       <span className="text-[10px] font-mono text-primary">
-                        RENDER: THREE.JS
+                        LIB: REACT.JS
                       </span>
                     </div>
                     <div className="bg-primary/5 border border-primary/20 px-3 py-1 rounded">
                       <span className="text-[10px] font-mono text-primary">
-                        LOGIC: NEXT.JS
+                        FRAMEWORK: NEXT.JS
                       </span>
                     </div>
                     <div className="bg-primary/5 border border-primary/20 px-3 py-1 rounded">
