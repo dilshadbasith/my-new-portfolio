@@ -60,7 +60,7 @@ export default function Hero() {
                 download
                 className="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded h-12 px-6 bg-primary text-white text-sm font-bold uppercase tracking-widest hover:shadow-[0_0_20px_rgba(37,140,244,0.6)] transition-all"
               >
-                <span className="truncate flex items-center gap-1">Resume <HiOutlineDownload className="text-xl" /></span>
+                <span className="truncate flex items-center gap-2">Resume <HiOutlineDownload className="text-xl" /></span>
               </a>
               <Link href="#contact" className="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded h-12 px-6 border border-white/20 bg-white/5 text-white text-sm font-bold uppercase tracking-widest hover:bg-white/10 transition-all">
                 <span className="truncate">Contact</span>
