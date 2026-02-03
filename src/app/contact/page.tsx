@@ -28,7 +28,7 @@ export default function Contact() {
                 <main className="flex-1 flex items-center justify-center px-4 py-8">
                     <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                         {/* Left Column: Information */}
-                        <div className="space-y-8 lg:pt-8 order-2 lg:order-1">
+                        <div className="space-y-8 lg:pt-8 lg:order-1">
                             <div className="space-y-2">
                                 <div className="flex items-center gap-4 text-primary mb-2">
                                     <span className="h-[1px] w-8 bg-primary/40"></span>
@@ -79,7 +79,7 @@ export default function Contact() {
                         </div>
 
                         {/* Right Column: Form */}
-                        <div className="relative order-1 lg:order-2">
+                        <div className="relative lg:order-2">
                             <div className="corner-bracket -top-3 -left-3 border-t-2 border-l-2 w-8 h-8 opacity-50"></div>
                             <div className="corner-bracket -bottom-3 -right-3 border-b-2 border-r-2 w-8 h-8 opacity-50"></div>
 

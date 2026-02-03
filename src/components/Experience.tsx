@@ -34,7 +34,7 @@ export default function Experience() {
                 </div>
               </div>
 
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden md:block">
                 <div className="circuit-node size-4 rounded-full bg-accent-cyan cursor-pointer hover:scale-125 transition-transform duration-300 ring-4 ring-primary/20"></div>
               </div>
 
@@ -147,7 +147,7 @@ export default function Experience() {
                 </div>
               </div>
 
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden md:block">
                 <div className="circuit-node size-4 rounded-full bg-accent-cyan/60 cursor-pointer hover:scale-125 transition-transform duration-300 ring-4 ring-primary/10"></div>
               </div>
 
@@ -172,7 +172,7 @@ export default function Experience() {
                 </div>
               </div>
 
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden md:block">
                 <div className="circuit-node size-4 rounded-full bg-accent-cyan/40 cursor-pointer hover:scale-125 transition-transform duration-300 ring-4 ring-primary/5"></div>
               </div>
 
