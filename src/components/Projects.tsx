@@ -8,27 +8,45 @@ const projects = [
     title: "Exthgen Official Website",
     description: "Fully responsive, SEO-optimized company website built with Next.js to improve performance and visibility.",
     tags: ["Next.js", "Tailwind CSS", "Shadcn UI"],
-    image: "/project-thumb.png",
+    image: "/company-web.png",
     github: "#",
-    live: "#",
+    live: "https://exthgen.com",
   },
   {
     id: "PROJ_02",
     title: "Brickly Web",
     description: "High-performance web app for streamlining business operations including Finance, HR, and Org Management.",
     tags: ["React JS", "Redux", "Tailwind CSS"],
-    image: "/project-thumb.png",
+    image: "/brickly.png",
     github: "#",
-    live: "#",
+    live: "https://app.brickly.ai",
   },
   {
     id: "PROJ_03",
     title: "Vehicify Web",
     description: "Modern logistics platform for fleet management with real-time tracking and mobile-friendly interfaces.",
-    tags: ["React JS", "TypeScript", "Radix UI"],
-    image: "/project-thumb.png",
+    tags: ["React JS", "TypeScript", "Shadcn UI"],
+    image: "/vehicify.png",
     github: "#",
-    live: "#",
+    live: "https://vehicify-prod.web.app/",
+  },
+  {
+    id: "PROJ_04",
+    title: "Brickly ERP",
+    description: "Comprehensive Solution for Business Management.",
+    tags: ["React JS", "Redux", "Material UI"],
+    image: "/erp.png",
+    github: "#",
+    live: "https://erp-landing.brickly.ai/",
+  },
+  {
+    id: "PROJ_05",
+    title: "PMRC Edifice",
+    description: "A responsive corporate website built for PMRC Edifice to showcase their construction services and projects.",
+    tags: ["Next JS", "Tailwind CSS", "Shadcn UI"],
+    image: "/pmrc.png",
+    github: "#",
+    live: "https://pmr.construction/",
   },
 ];
 
@@ -55,18 +73,18 @@ export default function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+        <div className="flex flex-wrap justify-center gap-8 w-full">
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className="group relative"
+              className="group relative w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.33%-1.34rem)]"
             >
               <div className="data-log-panel rounded-lg overflow-hidden h-full flex flex-col transition-transform duration-300 hover:-translate-y-2">
                 {/* Decorative Elements */}
                 <div className="scanline absolute top-0 left-0 z-20 pointer-events-none"></div>
                 <div className="corner-bracket absolute top-0 left-0 border-t border-l z-20"></div>
                 <div className="corner-bracket absolute bottom-0 right-0 border-b border-r z-20"></div>
-                
+
                 {/* Image Container */}
                 <div className="relative h-48 w-full overflow-hidden border-b border-primary/20">
                   <div className="absolute inset-0 bg-primary/20 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-300"></div>
@@ -108,16 +126,20 @@ export default function Projects() {
                   <div className="flex items-center gap-4 mt-auto pt-4 border-t border-white/5">
                     <Link
                       href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center gap-2 text-xs text-white/50 hover:text-accent-cyan transition-colors uppercase tracking-wider font-medium"
                     >
-                      <FaGithub className="text-lg" />
-                      <span>Source</span>
+                      {/* <FaGithub className="text-lg" />
+                      <span>Source</span> */}
                     </Link>
                     <Link
                       href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex items-center gap-2 text-xs text-white/50 hover:text-accent-cyan transition-colors uppercase tracking-wider font-medium ml-auto"
                     >
-                      <span>Deploy</span>
+                      <span>Live</span>
                       <FaExternalLinkAlt className="text-sm" />
                     </Link>
                   </div>

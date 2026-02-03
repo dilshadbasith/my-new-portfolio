@@ -17,10 +17,10 @@ export default function Skills() {
       name: "Backend & DB",
       icon: "storage",
       skills: [
-        { name: "Node.js / Express", level: 80 },
-        { name: "Python / Django", level: 75 },
-        { name: "MongoDB", level: 80 },
-        { name: "Strapi", level: 70 },
+        { name: "Strapi", level: 90 },
+        { name: "Node.js / Express", level: 70 },
+        { name: "MongoDB", level: 70 },
+        { name: "Python / Django", level: 65 },
       ],
     },
     {
@@ -64,7 +64,7 @@ export default function Skills() {
                 {/* Decorative Corners */}
                 <div className="corner-bracket top-0 left-0 border-t border-l opacity-50"></div>
                 <div className="corner-bracket bottom-0 right-0 border-b border-r opacity-50"></div>
-                
+
                 {/* Header */}
                 <div className="flex items-center gap-4 mb-8 border-b border-white/5 pb-4">
                   <div className="size-10 rounded bg-primary/10 flex items-center justify-center border border-primary/20 text-primary">
@@ -93,7 +93,7 @@ export default function Skills() {
                         </span>
                       </div>
                       <div className="h-1 w-full bg-white/5 rounded-full overflow-hidden">
-                        <div 
+                        <div
                           className="h-full bg-gradient-to-r from-primary to-accent-cyan relative"
                           style={{ width: `${skill.level}%` }}
                         >

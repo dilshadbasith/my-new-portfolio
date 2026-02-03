@@ -178,7 +178,7 @@ export default function Experience() {
 
               <div className="md:w-1/2 w-full md:pl-12 flex justify-center md:justify-start">
                 <div className="w-full max-w-sm">
-                  <div className="data-log-panel p-6 rounded-lg relative overflow-hidden opacity-80 hover:opacity-100 transition-opacity">
+                  <div className="data-log-panel p-6 rounded-lg relative overflow-hidden">
                     <div className="scanline absolute top-0 left-0"></div>
                     <div className="corner-bracket absolute top-0 left-0 border-t border-l"></div>
                     <div className="corner-bracket absolute bottom-0 right-0 border-b border-r"></div>

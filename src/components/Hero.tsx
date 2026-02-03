@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HiOutlineDownload } from "react-icons/hi";
 
 export default function Hero() {
   return (
@@ -33,7 +34,7 @@ export default function Hero() {
               <div className="flex items-center justify-center gap-2 mb-2">
                 <span className="h-[1px] w-12 bg-primary/50"></span>
                 <span className="text-primary text-[10px] font-bold tracking-[0.5em] uppercase">
-                  Status: Online
+                  I am
                 </span>
                 <span className="h-[1px] w-12 bg-primary/50"></span>
               </div>
@@ -50,13 +51,17 @@ export default function Hero() {
                 </span>
               </h1>
               <p className="text-[#90adcb] text-xs md:text-base font-medium tracking-[0.3em] uppercase max-w-xl mx-auto mt-4">
-                Full-Stack Creative & Interactive Developer
+                Front-End Creative & Interactive Developer
               </p>
             </div>
             <div className="flex flex-wrap gap-4 justify-center mt-4">
-              <Link href="#work" className="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded h-12 px-6 bg-primary text-white text-sm font-bold uppercase tracking-widest hover:shadow-[0_0_20px_rgba(37,140,244,0.6)] transition-all">
-                <span className="truncate">View Archive</span>
-              </Link>
+              <a
+                href="/DILSHAD-BASITH-reactdev.pdf"
+                download
+                className="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded h-12 px-6 bg-primary text-white text-sm font-bold uppercase tracking-widest hover:shadow-[0_0_20px_rgba(37,140,244,0.6)] transition-all"
+              >
+                <span className="truncate flex items-center gap-1">Resume <HiOutlineDownload className="text-xl" /></span>
+              </a>
               <Link href="#contact" className="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded h-12 px-6 border border-white/20 bg-white/5 text-white text-sm font-bold uppercase tracking-widest hover:bg-white/10 transition-all">
                 <span className="truncate">Contact</span>
               </Link>
@@ -64,20 +69,20 @@ export default function Hero() {
 
             {/* Tech Stack Sub-panel */}
             <div className="mt-8 pt-8 border-t border-white/5 w-full flex flex-wrap justify-center gap-8 text-white/40">
-              <div className="flex items-center gap-2 group cursor-crosshair">
+              {/* <div className="flex items-center gap-2 group cursor-crosshair">
                 <span className="material-symbols-outlined text-sm group-hover:text-primary transition-colors">
                   terminal
                 </span>
                 <span className="text-[10px] font-bold tracking-widest group-hover:text-white transition-colors">
                   GLSL / WEBGL
                 </span>
-              </div>
+              </div> */}
               <div className="flex items-center gap-2 group cursor-crosshair">
                 <span className="material-symbols-outlined text-sm group-hover:text-primary transition-colors">
                   view_in_ar
                 </span>
                 <span className="text-[10px] font-bold tracking-widest group-hover:text-white transition-colors">
-                  THREE.JS
+                  REACT.JS
                 </span>
               </div>
               <div className="flex items-center gap-2 group cursor-crosshair">

@@ -14,9 +14,11 @@
 
 /* Custom CSS classes */
 .glass-dock {
-  background: rgba(16, 26, 35, 0.97);
-  backdrop-filter: blur(60px);
+  background: rgba(16, 26, 35, 0.93);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .hero-glass-card {
