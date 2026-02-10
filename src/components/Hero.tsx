@@ -107,7 +107,7 @@ export default function Hero() {
           <div className="flex items-center gap-4">
             <div className="flex flex-col">
               <span className="text-xs font-bold text-white leading-none">
-                24.0°C
+                25.0°C
               </span>
               <span className="text-[8px] uppercase">Temp</span>
             </div>
