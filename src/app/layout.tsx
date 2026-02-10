@@ -21,10 +21,13 @@ export const metadata: Metadata = {
   keywords: ["Dilshad Basith", "Front-End Developer", "React Developer", "Next.js", "Web Developer", "Creative Developer", "Portfolio", "Kerala", "India"],
   authors: [{ name: "Dilshad Basith" }],
   creator: "Dilshad Basith",
+  verification: {
+    google: "mROJK9Ao95O9jC22hRubAijhYolKhaN5M7Z4NPHKHUE",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://your-domain.com", // You should update this with the actual URL if known, or generic
+    url: "https://dilshadbasith.vercel.app/", // You should update this with the actual URL if known, or generic
     title: "Dilshad Basith | Front-End Creative Developer",
     description: "Building immersive, high-performance digital experiences with React.js and Next.js.",
     siteName: "Dilshad Basith Portfolio",
@@ -56,6 +59,27 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Dilshad Basith",
+              url: "https://your-domain.com",
+              sameAs: [
+                "https://www.linkedin.com/in/your-username",
+                "https://github.com/your-username"
+              ],
+              jobTitle: "Front-End Developer",
+              worksFor: {
+                "@type": "Organization",
+                name: "Freelance"
+              }
+            }),
+          }}
+        />
+
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
