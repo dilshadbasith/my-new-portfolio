@@ -1,6 +1,44 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.7,
+      delay: i * 0.15,
+      ease: [0.22, 1, 0.36, 1] as const,
+    },
+  }),
+};
+
+const slideInLeft = {
+  hidden: { opacity: 0, x: -60 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
+  },
+};
+
+const slideInRight = {
+  hidden: { opacity: 0, x: 60 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
+  },
+};
+
 export default function Experience() {
   return (
-    <section id="experience" className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-background-dark">
+    <section
+      id="experience"
+      className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-background-dark"
+    >
       {/* Background Layer */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/10 rounded-full blur-[120px]"></div>
@@ -10,37 +48,82 @@ export default function Experience() {
 
       {/* Main Content */}
       <div className="relative z-10 w-full max-w-5xl px-6 py-20 flex flex-col items-center">
-        <div className="mb-16 text-center">
-          <h2 className="text-xs font-bold tracking-[0.8em] text-primary uppercase mb-2">
+        <motion.div
+          className="mb-16 text-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+        >
+          <motion.h2
+            className="text-xs font-bold tracking-[0.8em] text-primary uppercase mb-2"
+            variants={fadeInUp}
+            custom={0}
+          >
             Temporal Logs
-          </h2>
-          <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-tighter text-white">
+          </motion.h2>
+          <motion.h1
+            className="text-4xl md:text-5xl font-bold uppercase tracking-tighter text-white"
+            variants={fadeInUp}
+            custom={1}
+          >
             Career Milestones
-          </h1>
-          <div className="h-[2px] w-24 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mt-4"></div>
-        </div>
+          </motion.h1>
+          <motion.div
+            className="h-[2px] w-24 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mt-4"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          />
+        </motion.div>
 
         <div className="relative w-full flex justify-center py-10">
-          <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[2px] circuit-line opacity-40"></div>
+          <motion.div
+            className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-[2px] circuit-line opacity-40"
+            initial={{ scaleY: 0, originY: 0 }}
+            whileInView={{ scaleY: 1 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 1.5, ease: "easeOut" as const }}
+          />
           <div className="relative w-full max-w-3xl flex flex-col gap-16">
             {/* Experience Item 1 */}
-            <div className="relative flex md:flex-row flex-col items-center w-full">
-              <div className="md:w-1/2 w-full md:pr-12 md:text-right hidden md:block">
+            <motion.div
+              className="relative flex md:flex-row flex-col items-center w-full"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <motion.div
+                className="md:w-1/2 w-full md:pr-12 md:text-right hidden md:block"
+                variants={slideInLeft}
+              >
                 <span className="text-3xl font-bold text-primary/40 font-mono">
                   2024
                 </span>
                 <div className="text-[10px] tracking-widest text-white/40 uppercase">
                   Present
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden md:block">
+              <motion.div
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden md:block"
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3, type: "spring", stiffness: 200 }}
+              >
                 <div className="circuit-node size-4 rounded-full bg-accent-cyan cursor-pointer hover:scale-125 transition-transform duration-300 ring-4 ring-primary/20"></div>
-              </div>
+              </motion.div>
 
-              <div className="md:w-1/2 w-full md:pl-12 flex justify-center md:justify-start">
+              <motion.div
+                className="md:w-1/2 w-full md:pl-12 flex justify-center md:justify-start"
+                variants={slideInRight}
+              >
                 <div className="w-full max-w-sm">
-                  <div className="data-log-panel p-6 rounded-lg relative overflow-hidden group">
+                  <motion.div
+                    className="data-log-panel p-6 rounded-lg relative overflow-hidden group"
+                    whileHover={{ y: -4, transition: { duration: 0.3 } }}
+                  >
                     <div className="scanline absolute top-0 left-0"></div>
                     <div className="corner-bracket absolute top-0 left-0 border-t border-l"></div>
                     <div className="corner-bracket absolute bottom-0 right-0 border-b border-r"></div>
@@ -64,7 +147,9 @@ export default function Experience() {
                           &gt;&gt;
                         </span>
                         <p className="text-xs text-white/70 leading-relaxed font-mono">
-                          Built dynamic web apps using React.js and Next.js. Developed the official company website focusing on SEO and performance.
+                          Built dynamic web apps using React.js and Next.js.
+                          Developed the official company website focusing on SEO
+                          and performance.
                         </p>
                       </li>
                       <li className="flex items-start gap-2">
@@ -72,7 +157,8 @@ export default function Experience() {
                           &gt;&gt;
                         </span>
                         <p className="text-xs text-white/70 leading-relaxed font-mono">
-                          Designed reusable UI components with Tailwind CSS & Shadcn/UI, improving development speed and consistency.
+                          Designed reusable UI components with Tailwind CSS &
+                          Shadcn/UI, improving development speed and consistency.
                         </p>
                       </li>
                     </ul>
@@ -87,16 +173,27 @@ export default function Experience() {
                         SHADCN
                       </span>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
             {/* Experience Item 2 */}
-            <div className="relative flex md:flex-row flex-col items-center w-full">
-              <div className="md:w-1/2 w-full md:pr-12 flex justify-center md:justify-end">
+            <motion.div
+              className="relative flex md:flex-row flex-col items-center w-full"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <motion.div
+                className="md:w-1/2 w-full md:pr-12 flex justify-center md:justify-end"
+                variants={slideInLeft}
+              >
                 <div className="w-full max-w-sm">
-                  <div className="data-log-panel p-6 rounded-lg relative overflow-hidden">
+                  <motion.div
+                    className="data-log-panel p-6 rounded-lg relative overflow-hidden"
+                    whileHover={{ y: -4, transition: { duration: 0.3 } }}
+                  >
                     <div className="scanline absolute top-0 left-0"></div>
                     <div className="corner-bracket absolute top-0 left-0 border-t border-l"></div>
                     <div className="corner-bracket absolute bottom-0 right-0 border-b border-r"></div>
@@ -120,7 +217,8 @@ export default function Experience() {
                           &gt;&gt;
                         </span>
                         <p className="text-xs text-white/70 leading-relaxed font-mono">
-                          Specialized in Front-End Development with React.js. Contributed to a 20% increase in team proficiency.
+                          Specialized in Front-End Development with React.js.
+                          Contributed to a 20% increase in team proficiency.
                         </p>
                       </li>
                       <li className="flex items-start gap-2">
@@ -128,7 +226,8 @@ export default function Experience() {
                           &gt;&gt;
                         </span>
                         <p className="text-xs text-white/70 leading-relaxed font-mono">
-                          Collaborated with cross-functional teams to deliver scalable web solutions.
+                          Collaborated with cross-functional teams to deliver
+                          scalable web solutions.
                         </p>
                       </li>
                     </ul>
@@ -143,42 +242,71 @@ export default function Experience() {
                         MONGODB
                       </span>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden md:block">
+              <motion.div
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden md:block"
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3, type: "spring", stiffness: 200 }}
+              >
                 <div className="circuit-node size-4 rounded-full bg-accent-cyan/60 cursor-pointer hover:scale-125 transition-transform duration-300 ring-4 ring-primary/10"></div>
-              </div>
+              </motion.div>
 
-              <div className="md:w-1/2 w-full md:pl-12 md:text-left hidden md:block">
+              <motion.div
+                className="md:w-1/2 w-full md:pl-12 md:text-left hidden md:block"
+                variants={slideInRight}
+              >
                 <span className="text-3xl font-bold text-primary/40 font-mono">
                   2023
                 </span>
                 <div className="text-[10px] tracking-widest text-white/40 uppercase">
                   2024
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
 
             {/* Experience Item 3 */}
-            <div className="relative flex md:flex-row flex-col items-center w-full">
-              <div className="md:w-1/2 w-full md:pr-12 md:text-right hidden md:block">
+            <motion.div
+              className="relative flex md:flex-row flex-col items-center w-full"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <motion.div
+                className="md:w-1/2 w-full md:pr-12 md:text-right hidden md:block"
+                variants={slideInLeft}
+              >
                 <span className="text-3xl font-bold text-primary/40 font-mono">
                   2020
                 </span>
                 <div className="text-[10px] tracking-widest text-white/40 uppercase">
                   2023
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden md:block">
+              <motion.div
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden md:block"
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3, type: "spring", stiffness: 200 }}
+              >
                 <div className="circuit-node size-4 rounded-full bg-accent-cyan/40 cursor-pointer hover:scale-125 transition-transform duration-300 ring-4 ring-primary/5"></div>
-              </div>
+              </motion.div>
 
-              <div className="md:w-1/2 w-full md:pl-12 flex justify-center md:justify-start">
+              <motion.div
+                className="md:w-1/2 w-full md:pl-12 flex justify-center md:justify-start"
+                variants={slideInRight}
+              >
                 <div className="w-full max-w-sm">
-                  <div className="data-log-panel p-6 rounded-lg relative overflow-hidden">
+                  <motion.div
+                    className="data-log-panel p-6 rounded-lg relative overflow-hidden"
+                    whileHover={{ y: -4, transition: { duration: 0.3 } }}
+                  >
                     <div className="scanline absolute top-0 left-0"></div>
                     <div className="corner-bracket absolute top-0 left-0 border-t border-l"></div>
                     <div className="corner-bracket absolute bottom-0 right-0 border-b border-r"></div>
@@ -202,7 +330,8 @@ export default function Experience() {
                           &gt;&gt;
                         </span>
                         <p className="text-xs text-white/70 leading-relaxed font-mono">
-                          Completed graduation with a strong foundation in computer science and software development.
+                          Completed graduation with a strong foundation in
+                          computer science and software development.
                         </p>
                       </li>
                     </ul>
@@ -214,10 +343,10 @@ export default function Experience() {
                         ALGORITHMS
                       </span>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </div>

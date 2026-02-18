@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function Skills() {
   const skillCategories = [
     {
@@ -35,8 +39,30 @@ export default function Skills() {
     },
   ];
 
+  const container = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" as const },
+    },
+  };
+
   return (
-    <section id="skills" className="relative w-full py-20 bg-background-dark overflow-hidden flex flex-col items-center">
+    <section
+      id="skills"
+      className="relative w-full py-20 bg-background-dark overflow-hidden flex flex-col items-center"
+    >
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-[40%] left-[-20%] w-[60%] h-[60%] bg-primary/5 rounded-full blur-[120px]"></div>
@@ -46,20 +72,44 @@ export default function Skills() {
 
       <div className="relative z-10 w-full max-w-6xl px-6 flex flex-col items-center">
         {/* Section Header */}
-        <div className="mb-20 text-center">
-          <h2 className="text-xs font-bold tracking-[0.8em] text-primary uppercase mb-2">
+        <motion.div
+          className="mb-20 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <motion.h2
+            className="text-xs font-bold tracking-[0.8em] text-primary uppercase mb-2"
+            initial={{ opacity: 0, letterSpacing: "0em" }}
+            whileInView={{ opacity: 1, letterSpacing: "0.8em" }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             System Capabilities
-          </h2>
+          </motion.h2>
           <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-tighter text-white">
             Technical Arsenal
           </h1>
-          <div className="h-[2px] w-24 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mt-4"></div>
-        </div>
+          <motion.div
+            className="h-[2px] w-24 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto mt-4"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          ></motion.div>
+        </motion.div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full"
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
           {skillCategories.map((category) => (
-            <div key={category.id} className="relative group">
+            <motion.div key={category.id} className="relative group" variants={item}>
               <div className="data-log-panel p-8 rounded-lg h-full relative overflow-hidden transition-transform duration-300 hover:-translate-y-1">
                 {/* Decorative Corners */}
                 <div className="corner-bracket top-0 left-0 border-t border-l opacity-50"></div>
@@ -68,7 +118,9 @@ export default function Skills() {
                 {/* Header */}
                 <div className="flex items-center gap-4 mb-8 border-b border-white/5 pb-4">
                   <div className="size-10 rounded bg-primary/10 flex items-center justify-center border border-primary/20 text-primary">
-                    <span className="material-symbols-outlined">{category.icon}</span>
+                    <span className="material-symbols-outlined">
+                      {category.icon}
+                    </span>
                   </div>
                   <div>
                     <div className="text-[10px] font-mono text-primary/60 tracking-widest mb-1">
@@ -93,20 +145,23 @@ export default function Skills() {
                         </span>
                       </div>
                       <div className="h-1 w-full bg-white/5 rounded-full overflow-hidden">
-                        <div
+                        <motion.div
                           className="h-full bg-gradient-to-r from-primary to-accent-cyan relative"
-                          style={{ width: `${skill.level}%` }}
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${skill.level}%` }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 1, delay: 0.2 + idx * 0.1, ease: "easeOut" as const }}
                         >
                           <div className="absolute right-0 top-0 bottom-0 w-[2px] bg-white shadow-[0_0_10px_white]"></div>
-                        </div>
+                        </motion.div>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
