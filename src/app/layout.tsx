@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import SmoothScroll from "@/components/SmoothScroll";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -57,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark scroll-smooth">
       <head>
         <script
           type="application/ld+json"
@@ -88,7 +87,6 @@ export default function RootLayout({
       <body
         className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} antialiased bg-background-light dark:bg-background-dark font-display text-white selection:bg-primary/40 overflow-x-hidden`}
       >
-        <SmoothScroll />
         {children}
       </body>
     </html>
