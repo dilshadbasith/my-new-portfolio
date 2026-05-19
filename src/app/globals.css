@@ -12,20 +12,33 @@
   --font-mono: var(--font-jetbrains-mono), monospace;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Decorative background blobs — kept light so they don't repaint each scroll
+   frame. blur() lives on its own GPU layer via will-change. */
+.bg-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(60px);
+  will-change: transform;
+  pointer-events: none;
+}
+
 /* Custom CSS classes */
 .glass-dock {
-  background: rgba(16, 26, 35, 0.93);
-  backdrop-filter: blur(50px);
-  -webkit-backdrop-filter: blur(50px);
+  background: rgba(16, 26, 35, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .hero-glass-card {
-  background: rgba(37, 140, 244, 0.05);
-  backdrop-filter: blur(20px);
+  background: rgba(37, 140, 244, 0.06);
   border: 1px solid rgba(37, 140, 244, 0.2);
-  box-shadow: 0 0 40px rgba(37, 140, 244, 0.1), inset 0 0 20px rgba(255, 255, 255, 0.02);
+  box-shadow: 0 0 20px rgba(37, 140, 244, 0.08);
 }
 
 .grid-overlay {
@@ -51,10 +64,9 @@
 }
 
 .about-glass-card {
-  background: rgba(37, 140, 244, 0.03);
-  backdrop-filter: blur(25px);
+  background: rgba(15, 25, 40, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
 }
 
 .inner-glass {
@@ -70,16 +82,70 @@
 
 .circuit-line {
   background: linear-gradient(to bottom, transparent, #258cf4, #00f2ff, #258cf4, transparent);
-  box-shadow: 0 0 15px rgba(37, 140, 244, 0.5);
+  box-shadow: 0 0 8px rgba(37, 140, 244, 0.4);
 }
 
 .circuit-node {
-  box-shadow: 0 0 20px rgba(0, 242, 255, 0.6), inset 0 0 10px rgba(0, 242, 255, 0.4);
+  box-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
 }
 
 .data-log-panel {
-  background: rgba(5, 10, 18, 0.85);
-  backdrop-filter: blur(16px);
+  background: rgba(5, 10, 18, 0.92);
   border: 1px solid rgba(37, 140, 244, 0.3);
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Lightweight infinite animations — kept in CSS so they don't go through the
+   framer-motion JS scheduler each frame. */
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+@keyframes pulse-dim {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+@keyframes pulse-mid {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes scale-x-soft {
+  0%, 100% { transform: scaleX(0.6); }
+  50% { transform: scaleX(1); }
+}
+
+.anim-pulse-soft {
+  animation: pulse-soft 8s ease-in-out infinite;
+  will-change: opacity;
+}
+
+.anim-pulse-dim {
+  animation: pulse-dim 3s ease-in-out infinite;
+  will-change: opacity;
+}
+
+.anim-pulse-mid {
+  animation: pulse-mid 4s ease-in-out infinite;
+  will-change: opacity;
+}
+
+.anim-scalex {
+  animation: scale-x-soft 3.5s ease-in-out infinite;
+  will-change: transform;
+  transform-origin: right;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-pulse-soft,
+  .anim-pulse-dim,
+  .anim-pulse-mid,
+  .anim-scalex {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
 }

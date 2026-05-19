@@ -26,8 +26,8 @@ export default function Contact() {
         <>
             {/* Background Layer - Consistent with Theme */}
             <div className="fixed inset-0 z-0 bg-background-dark overflow-hidden pointer-events-none">
-                <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-primary/5 rounded-full blur-[120px]"></div>
-                <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-accent-magenta/5 rounded-full blur-[100px]"></div>
+                <div className="bg-blob top-[-20%] left-[-10%] w-[60%] h-[60%] bg-primary/5"></div>
+                <div className="bg-blob bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-accent-magenta/5"></div>
                 <div className="absolute inset-0 grid-overlay opacity-60"></div>
             </div>
 
@@ -40,7 +40,7 @@ export default function Contact() {
             >
                 <div className="flex flex-col gap-1">
                     <div className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                        <span className="w-2 h-2 bg-primary rounded-full anim-pulse-dim"></span>
                         <span className="text-[10px] font-mono tracking-tighter text-primary">
                             COMMS_ONLINE // PORT:22
                         </span>
@@ -186,7 +186,7 @@ export default function Contact() {
                             <div className="corner-bracket -bottom-3 -right-3 border-b-2 border-r-2 w-8 h-8 opacity-50"></div>
 
                             <div
-                                className="hero-glass-card p-6 md:p-8 rounded-xl border border-white/10 relative z-10 backdrop-blur-xl"
+                                className="hero-glass-card p-6 md:p-8 rounded-xl border border-white/10 relative z-10"
                                 style={{ transform: "translateZ(0)" }}
                             >
                                 <div className="scanline"></div>

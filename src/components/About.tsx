@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -33,8 +34,8 @@ export default function About() {
     >
       {/* Background Layer */}
       <div className="absolute inset-0 z-0 bg-background-dark">
-        <div className="absolute top-[-20%] left-[-10%] w-[60%] h-[60%] bg-primary/5 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-accent-magenta/5 rounded-full blur-[100px]"></div>
+        <div className="bg-blob top-[-20%] left-[-10%] w-[60%] h-[60%] bg-primary/5"></div>
+        <div className="bg-blob bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-accent-magenta/5"></div>
         <div className="absolute inset-0 grid-overlay opacity-60"></div>
       </div>
 
@@ -48,7 +49,7 @@ export default function About() {
       >
         <div className="flex flex-col gap-1">
           <div className="flex items-center gap-2">
-            <span className="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+            <span className="w-2 h-2 bg-primary rounded-full anim-pulse-dim"></span>
             <span className="text-[10px] font-mono tracking-tighter text-primary">
               SYS_ACTIVE // AD-001
             </span>
@@ -98,14 +99,17 @@ export default function About() {
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
-                <img
+                <Image
                   alt="Identity Avatar"
-                  className="w-full h-full object-cover grayscale opacity-80 mix-blend-screen"
                   src="/futuristic-profile.png"
+                  width={288}
+                  height={384}
+                  priority
+                  className="w-full h-full object-cover grayscale opacity-80 mix-blend-screen"
                 />
                 <div className="scanline"></div>
                 <div className="absolute inset-0 bg-primary/10 pointer-events-none"></div>
-                <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-md p-3 border border-primary/30">
+                <div className="absolute bottom-4 left-4 right-4 bg-black/80 p-3 border border-primary/30">
                   <div className="flex justify-between items-center mb-1">
                     <span className="text-[9px] font-mono text-primary font-bold">
                       DNA_SEQ_001

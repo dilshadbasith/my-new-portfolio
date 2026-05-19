@@ -65,8 +65,8 @@ export default function Skills() {
     >
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-[40%] left-[-20%] w-[60%] h-[60%] bg-primary/5 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-[20%] right-[-20%] w-[50%] h-[50%] bg-accent-cyan/5 rounded-full blur-[100px]"></div>
+        <div className="bg-blob top-[40%] left-[-20%] w-[60%] h-[60%] bg-primary/5"></div>
+        <div className="bg-blob bottom-[20%] right-[-20%] w-[50%] h-[50%] bg-accent-cyan/5"></div>
         <div className="absolute inset-0 grid-overlay opacity-30"></div>
       </div>
 

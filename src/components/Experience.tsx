@@ -41,8 +41,8 @@ export default function Experience() {
     >
       {/* Background Layer */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/10 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-accent-magenta/5 rounded-full blur-[100px]"></div>
+        <div className="bg-blob top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/10"></div>
+        <div className="bg-blob bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-accent-magenta/5"></div>
         <div className="absolute inset-0 grid-overlay opacity-30"></div>
       </div>
 

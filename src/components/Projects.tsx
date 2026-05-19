@@ -55,6 +55,16 @@ const projects = [
     github: "#",
     live: "https://pmr.construction/",
   },
+  {
+    id: "PROJ_06",
+    title: "Brickly Ai",
+    description:
+      "A responsive corporate website built for Brickly Ai to showcase their services and projects.",
+    tags: ["Next JS", "Tailwind CSS", "Framer Motion"],
+    image: "/bricklyai.png",
+    github: "#",
+    live: "https://brickly.ai/",
+  },
 ];
 
 const container = {
@@ -87,8 +97,8 @@ export default function Projects() {
     >
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-[20%] right-[-5%] w-[30%] h-[30%] bg-primary/5 rounded-full blur-[100px]"></div>
-        <div className="absolute bottom-[10%] left-[-5%] w-[25%] h-[25%] bg-accent-cyan/5 rounded-full blur-[80px]"></div>
+        <div className="bg-blob top-[20%] right-[-5%] w-[30%] h-[30%] bg-primary/5"></div>
+        <div className="bg-blob bottom-[10%] left-[-5%] w-[25%] h-[25%] bg-accent-cyan/5"></div>
         <div className="absolute inset-0 grid-overlay opacity-20"></div>
       </div>
 
@@ -151,7 +161,7 @@ export default function Projects() {
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
                   />
-                  <div className="absolute top-2 right-2 z-20 bg-black/60 backdrop-blur-md px-2 py-1 rounded border border-primary/30">
+                  <div className="absolute top-2 right-2 z-20 bg-black/80 px-2 py-1 rounded border border-primary/30">
                     <span className="text-[10px] font-mono text-accent-cyan tracking-widest">
                       {project.id}
                     </span>

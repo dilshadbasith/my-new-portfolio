@@ -26,69 +26,11 @@ export default function Hero() {
     >
       {/* Background Layer */}
       <div className="absolute inset-0 z-0 bg-background-dark">
-        {/* Radial Glows */}
-        <motion.div
-          className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/10 rounded-full blur-[120px]"
-          animate={{
-            scale: [1, 1.1, 1],
-            opacity: [0.7, 1, 0.7],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut" as const,
-          }}
-        />
-        <motion.div
-          className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-accent-magenta/5 rounded-full blur-[100px]"
-          animate={{
-            scale: [1, 1.15, 1],
-            opacity: [0.5, 1, 0.5],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut" as const,
-            delay: 2,
-          }}
-        />
+        {/* Radial Glows — static (animated glows triggered scroll repaints) */}
+        <div className="bg-blob top-[-10%] left-[-10%] w-[50%] h-[50%] bg-primary/10 anim-pulse-soft" />
+        <div className="bg-blob bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-accent-magenta/5" />
         {/* Grid Overlay */}
         <div className="absolute inset-0 grid-overlay opacity-40"></div>
-        {/* Subtle Particles */}
-        <motion.div
-          className="absolute top-1/4 left-1/3 w-1 h-1 bg-primary rounded-full shadow-[0_0_8px_#258cf4]"
-          animate={{
-            y: [0, -20, 0],
-            opacity: [0.4, 1, 0.4],
-          }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" as const }}
-        />
-        <motion.div
-          className="absolute top-1/2 left-1/4 w-1 h-1 bg-accent-magenta rounded-full shadow-[0_0_8px_#ff00ff] opacity-60"
-          animate={{
-            y: [0, -15, 0],
-            opacity: [0.3, 0.8, 0.3],
-          }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-            ease: "easeInOut" as const,
-            delay: 1,
-          }}
-        />
-        <motion.div
-          className="absolute top-2/3 right-1/4 w-1 h-1 bg-primary rounded-full shadow-[0_0_8px_#258cf4]"
-          animate={{
-            y: [0, -25, 0],
-            opacity: [0.5, 1, 0.5],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut" as const,
-            delay: 0.5,
-          }}
-        />
       </div>
 
       {/* Main Content */}
@@ -182,7 +124,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 1.4 }}
             >
               <motion.a
-                href="/DILSHAD-BASITH-reactdev.pdf"
+                href="/DILSHAD_BASITH_resume_updated.pdf"
                 download
                 className="flex min-w-[160px] cursor-pointer items-center justify-center overflow-hidden rounded h-12 px-6 bg-primary text-white text-sm font-bold uppercase tracking-widest hover:shadow-[0_0_20px_rgba(37,140,244,0.6)] transition-all"
                 whileHover={{ scale: 1.05 }}
@@ -290,60 +232,16 @@ export default function Hero() {
       {/* Decorative HUD Graphic */}
       <div className="fixed top-1/2 left-4 -translate-y-1/2 hidden xl:block opacity-20 pointer-events-none">
         <div className="flex flex-col gap-2">
-          <motion.div
-            className="w-1 h-12 bg-primary"
-            animate={{ opacity: [0.3, 1, 0.3] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <motion.div
-            className="w-1 h-4 bg-primary/40"
-            animate={{ opacity: [0.5, 1, 0.5] }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              ease: "easeInOut" as const,
-              delay: 0.5,
-            }}
-          />
-          <motion.div
-            className="w-1 h-8 bg-primary"
-            animate={{ opacity: [0.4, 1, 0.4] }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut" as const,
-              delay: 1,
-            }}
-          />
+          <div className="w-1 h-12 bg-primary anim-pulse-dim" />
+          <div className="w-1 h-4 bg-primary/40 anim-pulse-mid" />
+          <div className="w-1 h-8 bg-primary anim-pulse-dim" style={{ animationDelay: "1s" }} />
         </div>
       </div>
       <div className="fixed top-1/2 right-4 -translate-y-1/2 hidden xl:block opacity-20 pointer-events-none">
         <div className="flex flex-col gap-2 items-end">
-          <motion.div
-            className="w-8 h-[1px] bg-primary"
-            animate={{ scaleX: [0.5, 1, 0.5] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" as const }}
-          />
-          <motion.div
-            className="w-12 h-[1px] bg-primary/40"
-            animate={{ scaleX: [0.7, 1, 0.7] }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut" as const,
-              delay: 0.5,
-            }}
-          />
-          <motion.div
-            className="w-10 h-[1px] bg-primary"
-            animate={{ scaleX: [0.6, 1, 0.6] }}
-            transition={{
-              duration: 3.5,
-              repeat: Infinity,
-              ease: "easeInOut" as const,
-              delay: 1,
-            }}
-          />
+          <div className="w-8 h-[1px] bg-primary anim-scalex" />
+          <div className="w-12 h-[1px] bg-primary/40 anim-scalex" style={{ animationDelay: "0.5s" }} />
+          <div className="w-10 h-[1px] bg-primary anim-scalex" style={{ animationDelay: "1s" }} />
         </div>
       </div>
     </section>
